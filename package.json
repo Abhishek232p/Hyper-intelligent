@@ -1,0 +1,32 @@
+{
+  "name": "hyperintelligent-ar-ai-nexus",
+  "version": "2.0.0",
+  "description": "Advanced AR-AI platform with autonomous agents and billion-scale processing",
+  "main": "index.html",
+  "scripts": {
+    "dev": "netlify dev",
+    "build": "echo 'Building advanced AR-AI platform...'",
+    "deploy": "netlify deploy --prod"
+  },
+  "keywords": [
+    "ar",
+    "ai",
+    "autonomous",
+    "deepseek",
+    "gaussian-splatting",
+    "neural-radiance-fields",
+    "spatial-computing",
+    "edge-ai"
+  ],
+  "author": "HyperIntelligent Systems",
+  "license": "MIT",
+  "dependencies": {
+    "@netlify/functions": "^2.4.0",
+    "three": "^0.160.0",
+    "chart.js": "^4.4.1",
+    "axios": "^1.6.0"
+  },
+  "devDependencies": {
+    "netlify-cli": "^17.10.1"
+  }
+}

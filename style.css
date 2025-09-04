@@ -1,0 +1,126 @@
+/* HyperIntelligent AR-AI Nexus Styles */
+:root {
+    --ai-primary: #00ffff;
+    --ai-secondary: #ff00ff;
+    --ai-accent: #ffff00;
+    --ai-dark: #0a0a0a;
+    --ai-surface: #1a1a1a;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Orbitron', monospace;
+    background: linear-gradient(135deg, var(--ai-dark) 0%, var(--ai-surface) 50%, var(--ai-dark) 100%);
+    color: var(--ai-primary);
+    overflow-x: hidden;
+}
+
+.nexus-container {
+    min-height: 100vh;
+    position: relative;
+}
+
+.ai-loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: var(--ai-dark);
+    z-index: 9999;
+}
+
+.ai-core {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    margin-bottom: 2rem;
+}
+
+.core-pulse {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 3px solid var(--ai-primary);
+    border-radius: 50%;
+    animation: aiPulse 2s ease-in-out infinite;
+}
+
+.core-rings {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 1px solid var(--ai-secondary);
+    border-radius: 50%;
+    animation: aiRotate 3s linear infinite;
+}
+
+@keyframes aiPulse {
+    0%, 100% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.2); opacity: 0.7; }
+}
+
+@keyframes aiRotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.loading-progress {
+    width: 300px;
+    height: 4px;
+    background: rgba(0, 255, 255, 0.2);
+    border-radius: 2px;
+    overflow: hidden;
+    margin-top: 1rem;
+}
+
+.progress-bar {
+    height: 100%;
+    background: linear-gradient(90deg, var(--ai-primary), var(--ai-secondary));
+    width: 0%;
+    transition: width 0.3s ease;
+}
+
+.hidden {
+    display: none;
+}
+
+.ai-command-center {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 100vh;
+    background: rgba(26, 26, 26, 0.95);
+    border-right: 2px solid var(--ai-primary);
+    z-index: 1000;
+}
+
+.nexus-main {
+    margin-left: 300px;
+    padding: 2rem;
+    min-height: 100vh;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .ai-command-center {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+
+    .nexus-main {
+        margin-left: 0;
+        padding: 1rem;
+    }
+}
